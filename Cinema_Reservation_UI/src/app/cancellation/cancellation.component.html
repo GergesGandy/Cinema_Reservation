@@ -1,0 +1,15 @@
+
+<h1 class="text-center">Cancellation</h1>
+
+<div class="screen d-flex">
+    {{FilmName}}
+</div>
+<div class="container">
+    <div class="row justify-content-center" *ngIf="show">
+      <div class="col-2 m-2 d-flex box" (click)="cancellationChair(chair.id, chair.state)" *ngFor="let chair of chairs" [ngClass]="{grayImg: chair.state, greenImg: !chair.state}">
+        {{chair.id}}
+      </div>
+    </div>
+  </div>
+
+  
